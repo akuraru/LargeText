@@ -1,5 +1,5 @@
 func largeString() async -> String {
-    String(repeating: s, count: 2)
+    s
 }
 
 let s = """

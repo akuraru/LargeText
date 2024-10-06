@@ -19,9 +19,14 @@ struct FirstView: View {
     var body: some View {
         List {
             NavigationLink {
-                TextScreen(str: largeString)
+                TextScreen(str: s)
             } label: {
                 Text("Text")
+            }
+            NavigationLink {
+                LazyTextScreen(str: largeString)
+            } label: {
+                Text("LazyText")
             }
             NavigationLink {
                 LargeTextScreen(str: largeString)
