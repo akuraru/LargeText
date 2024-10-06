@@ -9,13 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            FirstView()
         }
-        .padding()
+    }
+}
+    
+struct FirstView: View {
+    var body: some View {
+        List {
+            NavigationLink {
+                TextScreen(str: largeString)
+            } label: {
+                Text("Text")
+            }
+            NavigationLink {
+                LargeTextScreen(str: largeString)
+            } label: {
+                Text("LargeText")
+            }
+        }
     }
 }
 
